@@ -3,331 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerry Innocent | Technicien Bureautique & Développeur Front-End</title>
+    <title>Jerry Innocent | Portfolio</title>
+    <meta name="description" content="Portfolio de Jerry Innocent, Technicien en informatique et créatif passionné par le numérique. Découvrez mes projets, compétences et contactez-moi.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <a href="#" class="logo">Jerry<span>Innocent</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Section Hero (Accueil) -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Bonjour, je suis <span class="highlight">Jerry Innocent</span></h1>
-                <div class="typing-container">
-                    <h2 class="typing-text">Technicien en Bureautique &</h2>
-                </div>
-                <p class="hero-description">
-                   Technicien bureautique passionné par l'architecture informatique, je combine 
-                    maîtrise logicielle, maintenance matérielle et création d'interfaces web modernes.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
-                    <a href="#services" class="btn btn-secondary">Voir mes services</a>
-                </div>
+    <!-- En-tête avec navigation principale -->
+    <header>
+        <div class="container header-content">
+            <div class="header-text">
+                <h1 class="site-title">Jerry Innocent</h1>
+                <p class="tagline">Technicien en informatique | Developper web front-end</p>
             </div>
-            <div class="hero-illustration">
-                <div class="code-illustration">
-                    <div class="code-line"><span class="code-tag">&lt;div</span> <span class="code-attr">class=</span><span class="code-value">"portfolio"</span><span class="code-tag">&gt;</span></div>
-                    <div class="code-line indent-1"><span class="code-tag">&lt;h1&gt;</span>Développeur Front-End<span class="code-tag">&lt;/h1&gt;</span></div>
-                    <div class="code-line indent-1"><span class="code-tag">&lt;p&gt;</span>Création d'interfaces web interactives<span class="code-tag">&lt;/p&gt;</span></div>
-                    <div class="code-line"><span class="code-tag">&lt;/div&gt;</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section À propos -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <div class="avatar-container">
-                            <div class="avatar">
-                                <span class="avatar-initials">JI</span>
-                            </div>
-                            <div class="avatar-decoration">
-                                <div class="circle circle-1"></div>
-                                <div class="circle circle-2"></div>
-                                <div class="circle circle-3"></div>
-                            </div>
-                        </div>
-                        <div class="image-caption">
-                            <p>Jerry Innocent</p>
-                            <p>Technicien Bureautique & Développeur Front-End</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3>Mon parcours et mes compétences</h3>
-                    <p>
-                        Je suis un professionnel passionné par les technologies digitales, spécialisé en 
-                        bureautique et développement web front-end. Mon objectif est de créer des solutions 
-                        efficaces qui répondent aux besoins spécifiques des entreprises et des utilisateurs.
-                    </p>
-                    <p>
-                       Expert en solutions numériques, je conjugue une solide maîtrise de la bureautique 
-                        et du hardware avec une expertise en développement Front-End pour concevoir des interfaces intuitives et optimiser la productivité."
-                    </p>
-                    
-                    <div class="skills-container">
-                        <h4>Mes compétences</h4>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <h5>Développement Front-End</h5>
-                                    <p>HTML5, CSS3, JavaScript, React</p>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-desktop"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <h5>Bureautique</h5>
-                                    <p>Suite Office, Gestion de documents, Automatisation</p>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-paint-brush"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <h5>UI/UX Design</h5>
-                                    <p>Conception d'interfaces, Expérience utilisateur</p>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-tools"></i>
-                                </div>
-                                <div class="skill-info">
-                                    <h5>Maintenance & Support</h5>
-                                    <p>Résolution de problèmes, Assistance technique</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i> Me contacter
-                        </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <i class="fas fa-list-alt"></i> Mes services
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Mes services</h2>
-            <p class="section-subtitle">Des solutions sur mesure pour vos besoins numériques</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+            <!-- Navigation principale -->
+           <!-- Navigation principale -->
+<nav>
+    <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    
+    <!-- Bouton toggle mode sombre/clair -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Mode sombre/clair">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Menu hamburger pour mobile -->
+    <button class="hamburger" aria-label="Menu navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Hero -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Bienvenue sur mon Portfolio</h2>
+                    <p class="hero-subtitle">Découvrez mes projets et mon univers créatif</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">Voir mes Projets</a>
+                        <a href="#contact" class="btn-secondary">Me Contacter</a>
                     </div>
-                    <h3>Développement Web Front-End</h3>
-                    <p>Création de sites web modernes, responsives et performants avec les dernières technologies front-end (HTML5, CSS3, JavaScript, React).</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check-circle"></i> Sites vitrines & portfolios</li>
-                        <li><i class="fas fa-check-circle"></i> Applications web interactives</li>
-                        <li><i class="fas fa-check-circle"></i> Intégration de maquettes</li>
-                        <li><i class="fas fa-check-circle"></i> Optimisation pour mobiles</li>
-                    </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+       <!-- Section À propos -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="about-content">
+            <!-- Texte aligné à gauche -->
+            <div class="about-text">
+                <p>Je suis Jerry Innocent, un Technicien en informatique bureautique et web designer. Avec une solide expérience dans le dépannage, je crée des expériences digitales qui allient esthétique et fonctionnalité.</p>
+                <p>Mon approche combine rigueur technique et créativité pour transformer des idées en solutions concrètes. Je m'intéresse particulièrement aux technologies émergentes, au design d'interface et à l'expérience utilisateur.</p>
+                <p>Mon objectif professionnel est de contribuer à des projets innovants qui ont un impact positif, tout en continuant à développer mes compétences dans le domaine du développement full-stack et de la conception numérique.</p>
+            </div>
+            
+            <!-- Photo avec effets à droite -->
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="assets/Jerry.png" alt="Jerry Innocent" class="profile-photo">
+                    <div class="image-overlay"></div>
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Section Projets -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Mes Projets</h2>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-excel"></i>
-                    </div>
-                    <h3>Solutions Bureautiques</h3>
-                    <p>Optimisation de vos processus bureautiques avec des solutions sur mesure pour améliorer la productivité de votre entreprise.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check-circle"></i> Automatisation avec Excel/Google Sheets</li>
-                        <li><i class="fas fa-check-circle"></i> Création de modèles & formulaires</li>
-                        <li><i class="fas fa-check-circle"></i> Gestion de bases de données</li>
-                        <li><i class="fas fa-check-circle"></i> Formation aux outils bureautiques</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Support & Maintenance</h3>
-                    <p>Assistance technique et maintenance pour vos équipements informatiques et logiciels afin d'assurer leur bon fonctionnement.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check-circle"></i> Support technique à distance</li>
-                        <li><i class="fas fa-check-circle"></i> Installation & configuration de logiciels</li>
-                        <li><i class="fas fa-check-circle"></i> Résolution de problèmes informatiques</li>
-                        <li><i class="fas fa-check-circle"></i> Maintenance préventive</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="services-cta">
-                <p>Vous avez un projet en tête ou besoin d'une solution personnalisée ?</p>
-                <a href="#contact" class="btn btn-primary btn-large">
-                    <i class="fas fa-paper-plane"></i> Discutons de votre projet
-                </a>
-            </div>
-        </div>
-    </section>
+                <!-- Projets achevés -->
+                <div class="projects-category">
+                    <h3 class="category-title">Projets Achevés</h3>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Conception site web coffee beans</h4>
+                                <span class="project-status completed">Terminé</span>
+                            </div>
+                            <p class="project-description">Marketplace spécialisée dans la vente de café.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </article>
+                        
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Conception site pour un artiste peintre</h4>
+                                <span class="project-status completed">Terminé</span>
+                            </div>
+                            <p class="project-description">Réalisation d'un site pour un artiste peintre, avec interface interactive (prototype), responsive.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </article>
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <p class="section-subtitle">N'hésitez pas à me contacter pour discuter de votre projet ou pour toute question</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>jerryinnocent@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Téléphone</h4>
-                            <p>+509 31 12 11 89</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Localisation</h4>
-                            <p>Haiti, Pétio-vile</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <h4>Suivez-moi</h4>
-                        <div class="social-icons">
-                            <a href="https://github.com/jerryinnocent123-shit-it" class="social-icon" ><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-codepen"></i></a>
-                        </div>
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Conception site Streaming</h4>
+                                <span class="project-status completed">Terminé</span>
+                            </div>
+                            <p class="project-description">Réalisation d'un site pour regarder des films et séries, avec interface interactive (prototype), responsive.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" placeholder="Votre nom" required>
-                        </div>
+                <!-- Projets en cours -->
+                <div class="projects-category">
+                    <h3 class="category-title">Projets en Cours</h3>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Création d'un site E-commerce</h4>
+                                <span class="project-status in-progress">En développement</span>
+                            </div>
+                            <p class="project-description">Plateforme de vente qui permet aux clients de trouver les meilleurs produits selon leur localisation.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">VS Code</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </article>
                         
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Votre adresse email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <input type="text" id="subject" placeholder="Sujet de votre message" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
-                        </button>
-                    </form>
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Création d'un portfolio</h4>
+                                <span class="project-status in-progress">En développement</span>
+                            </div>
+                            <p class="project-description">Réalisation d'un portfolio responsive et disponible en ligne.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">VS Code</span>
+                                <span class="tech-tag">GitHub</span>
+                                <span class="tech-tag">AI Integration</span>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <!-- Section Compétences -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Mes Compétences</h2>
+                <div class="skills-container">
+                    <!-- Compétences techniques -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Techniques</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Développement Frontend</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 0%;" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bureautique</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 0%;" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Conception UI/UX</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 0%;" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bases de données</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 0%;" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Outils et technologies -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Outils & Technologies</h3>
+                        <div class="skills-tags">
+                            <span class="tool-tag">HTML5 / CSS3</span>
+                            <span class="tool-tag">JavaScript ES6+</span>
+                            <span class="tool-tag">React / Vue.js</span>
+                            <span class="tool-tag">Word / Excel</span>
+                            <span class="tool-tag">PowerPoint / Access</span>
+                            <span class="tool-tag">Gmail / Outlook</span>
+                            <span class="tool-tag">Figma / Adobe XD</span>
+                            <span class="tool-tag">Installation Windows</span>
+                            <span class="tool-tag">Git / GitHub</span>
+                            <span class="tool-tag">MS SQL</span>
+                            <span class="tool-tag">Serveur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Me Contacter</h2>
+                <div class="contact-container">
+                    <!-- Informations de contact -->
+                    <div class="contact-info">
+                        <h3 class="contact-subtitle">Restons en contact</h3>
+                        <p>N'hésitez pas à me contacter pour discuter de projets, collaborations ou opportunités.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:jerryinnocent123@gmail.com">jerryinnocent123@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <a href="#" target="_blank">linkedin.com/in/jerryinnocent</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <a href="#" target="_blank">github.com/jerryinnocent</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-twitter"></i>
+                                <div>
+                                    <h4>Twitter</h4>
+                                    <a href="#" target="_blank">@jerryinnocent</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulaire de contact -->
+                    <div style="width: 100%; display: flex; justify-content: center;">
+    <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeSgDvERZgLxcxU-Nd6iksjU1aWyF8D7Gn9dX9nEuYRJSVvLA/viewform?embedded=true" 
+        width="100%" 
+        height="1000" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Chargement…
+    </iframe>
+</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <!-- Pied de page -->
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#" class="logo">Jerry<span>Innocent</span></a>
-                    <p>Technicien en Bureautique & Développeur Front-End</p>
-                </div>
-                
+                <p class="copyright">&copy; <span id="currentYear"></span> Jerry Innocent. Tous droits réservés.</p>
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
-                    <ul>
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <a href="#about">À propos</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                
-                <div class="footer-services">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Développement Front-End</li>
-                        <li>Solutions Bureautiques</li>
-                        <li>Support & Maintenance</li>
-                    </ul>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:jerryinnocent123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Jerry Innocent. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bouton retour en haut -->
-    <a href="#home" class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
