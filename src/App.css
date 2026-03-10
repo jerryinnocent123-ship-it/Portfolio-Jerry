@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variables globales - Mode clair (par défaut) */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --gray-color: #64748b;
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #1e293b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --border-color: #e2e8f0;
+  --input-bg: #ffffff;
+  --tag-bg: #f8fafc;
+}
+
+/* Variables globales - Mode sombre */
+:root.dark-mode, 
+html.dark-mode,
+body.dark-mode {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --dark-color: #f8fafc;
+  --light-color: #1e293b;
+  --gray-color: #cbd5e1;
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --card-bg: #1e293b;
+  --header-bg: rgba(15, 23, 42, 0.95);
+  --footer-bg: #0f172a;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --border-color: #334155;
+  --input-bg: #334155;
+  --tag-bg: #334155;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles de base pour le mode sombre */
+.dark-mode {
+  background-color: var(--bg-color);
+}
+
+.dark-mode .bg-light {
+  background-color: var(--light-color);
+}

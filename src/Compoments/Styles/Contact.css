@@ -1,0 +1,134 @@
+.contact-section {
+  padding: 100px 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.contact-info p {
+  color: var(--gray-color);
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-method svg {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-method h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.contact-method a {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: var(--primary-color);
+}
+
+.contact-form-container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact-iframe {
+  border: none;
+  min-height: 800px;
+  background: transparent;
+}
+
+/* Responsive */
+@media screen and (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-method svg {
+    margin-bottom: 10px;
+  }
+  
+  .contact-iframe {
+    min-height: 600px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .contact-form-container {
+    padding: 20px;
+  }
+  
+  .contact-iframe {
+    min-height: 500px;
+  }
+}
