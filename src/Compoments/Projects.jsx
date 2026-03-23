@@ -48,6 +48,12 @@ const Projects = () => {
       description: 'Réalisation d\'un portfolio responsive et disponible en ligne.',
       technologies: ['Figma', 'VS Code', 'GitHub', 'AI Integration'],
       status: 'in-progress'
+    },
+    {
+      title: 'Création d\'un Market Restaurant',
+      description: 'Réalisation d\'un Market responsive et disponible en ligne Pour commander a manger en Haiti.',
+      technologies: ['Figma', 'VS Code', 'GitHub', 'AI Integration','react','tailwing'],
+      status: 'in-progress'
     }
   ];
 
