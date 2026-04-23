@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import './Styles/Skills.css';
 
 const Skills = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true
@@ -23,17 +25,17 @@ const Skills = () => {
   }, [inView]);
 
   const technicalSkills = [
-    { name: 'Développement Frontend', level: 90 },
-    { name: 'Bureautique', level: 80 },
-    { name: 'Conception UI/UX', level: 85 },
-    { name: 'Bases de données', level: 75 }
+    { name: t('Développement Frontend'), level: 90 },
+    { name: t('Bureautique'), level: 80 },
+    { name: t('Conception UI/UX'), level: 85 },
+    { name: t('Bases de données'), level: 50 }
   ];
 
   const tools = [
     'HTML5 / CSS3', 'JavaScript ES6+', 'React / Vue.js',
     'Word / Excel', 'PowerPoint / Access', 'Gmail / Outlook',
     'Figma / Adobe XD', 'Installation Windows', 'Git / GitHub',
-    'MS SQL', 'Serveur'
+    'Supabase', 'tailwindcss', 'Bootstrap'
   ];
 
   return (
@@ -45,12 +47,12 @@ const Skills = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Mes Compétences
+          {t('Mes Compétences')}
         </motion.h2>
         
         <div className="skills-container">
           <div className="skills-category">
-            <h3 className="skills-category-title">Techniques</h3>
+            <h3 className="skills-category-title">{t('Techniques')}</h3>
             <div className="skills-list">
               {technicalSkills.map((skill, index) => (
                 <motion.div 
@@ -75,7 +77,7 @@ const Skills = () => {
           </div>
           
           <div className="skills-category">
-            <h3 className="skills-category-title">Outils & Technologies</h3>
+            <h3 className="skills-category-title">{t('Outils & Technologies')}</h3>
             <div className="skills-tags">
               {tools.map((tool, index) => (
                 <motion.span 

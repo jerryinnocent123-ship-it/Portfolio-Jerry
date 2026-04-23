@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import './Styles/Projects.css';
+import { link } from 'framer-motion/client';
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -11,49 +14,56 @@ const Projects = () => {
 
   const completedProjects = [
     {
-      title: 'Conception site web coffee beans',
-      description: 'Marketplace spécialisée dans la vente de café.',
+      title: t('Conception site pour un café local'),
+      description: t('Marketplace spécialisée dans la vente de café.'),
       technologies: ['Figma'],
-      status: 'completed'
+      status: t('completed'),
+      link:"https://www.figma.com/design/1g5NNtFNs6ls2RnGWbnePJ/Projets-Figma?node-id=0-1&t=bWRY6PjtADulqgr3-1"
     },
     {
-      title: 'Conception site pour un artiste peintre',
-      description: 'Réalisation d\'un site pour un artiste peintre, avec interface interactive (prototype), responsive.',
+      title: t('Conception site pour un artiste peintre'),
+      description: t('Réalisation d\'un site pour un artiste peintre, avec interface interactive (prototype), responsive.'),
       technologies: ['Figma'],
-      status: 'completed'
+      status: t('completed'),
+      link:"https://www.figma.com/design/1g5NNtFNs6ls2RnGWbnePJ/Projets-Figma?node-id=65-57&t=bWRY6PjtADulqgr3-1"
     },
     {
-      title: 'Conception site Streaming',
-      description: 'Réalisation d\'un site pour regarder des films et séries, avec interface interactive (prototype), responsive.',
+      title: t('Conception site Streaming'),
+      description: t('Réalisation d\'un site pour regarder des films et séries, avec interface interactive (prototype), responsive.'),
       technologies: ['React'],
-      status: 'completed'
+      status: t('completed'),
+      link:"https://www.figma.com/design/wTO1xXE1SLnCso9XGVSIDG/Pratique?node-id=0-1&t=bWRY6PjtADulqgr3-1"
     },
     {
-      title: 'Creation Portfolio',
-      description: 'Réalisation d\'un Portfolio , avec interface interactive (prototype), responsive.',
+      title: t('Creation Portfolio'),
+      description: t('Réalisation d\'un Portfolio , avec interface interactive (prototype), responsive.'),
       technologies: ['React'],
-      status: 'completed'
+      status: t('completed'),
+      link:"none"
     }
   ];
 
   const inProgressProjects = [
     {
-      title: 'Création d\'un site E-commerce',
-      description: 'Plateforme de vente qui permet aux clients de trouver les meilleurs produits selon leur localisation.',
-      technologies: ['Figma', 'VS Code', 'Bootstrap', 'JavaScript', 'React'],
-      status: 'in-progress'
+      title: t('Création d\'un site E-commerce'),
+      description: t('Plateforme de vente qui permet aux clients de trouver les meilleurs produits selon leur localisation.'),
+      technologies: ['Figma', 'VS Code', 'tailwind', 'JavaScript', 'React'],
+      status: t('in-progress'),
+      link:"none"
     },
     {
-      title: 'Création d\'un portfolio',
-      description: 'Réalisation d\'un portfolio responsive et disponible en ligne.',
-      technologies: ['Figma', 'VS Code', 'GitHub', 'AI Integration'],
-      status: 'in-progress'
+      title: t('Création d\'un portfolio'),
+      description: t('Réalisation d\'un portfolio responsive et disponible en ligne.'),
+      technologies: ['React', 'VS Code', 'GitHub', 'AI Integration','tailwind','lucide React'],
+      status: t('in-progress'),
+      link:"https://github.com/jerryinnocent123-ship-it/Portfolio-Jerry.git"
     },
     {
-      title: 'Création d\'un Market Restaurant',
-      description: 'Réalisation d\'un Market responsive et disponible en ligne Pour commander a manger en Haiti.',
-      technologies: ['Figma', 'VS Code', 'GitHub', 'AI Integration','react','tailwing'],
-      status: 'in-progress'
+      title: t('Création d\'un Market Restaurant'),
+      description: t('Réalisation d\'un Market responsive et disponible en ligne Pour commander a manger en Haiti.'),
+      technologies: ['Lucide React', 'VS Code', 'GitHub', 'AI Integration','React','tailwind'],
+      status: t('in-progress'),
+      link:"https://github.com/jerryinnocent123-ship-it/Project-FoodConnect.git"
     }
   ];
 
@@ -68,7 +78,7 @@ const Projects = () => {
       <div className="project-header">
         <h4 className="project-title">{project.title}</h4>
         <span className={`project-status ${project.status}`}>
-          {project.status === 'completed' ? 'Terminé' : 'En développement'}
+          {project.status === t('completed') ? t('Terminé') : t('En développement')}
         </span>
       </div>
       <p className="project-description">{project.description}</p>
@@ -76,7 +86,13 @@ const Projects = () => {
         {project.technologies.map((tech, i) => (
           <span key={i} className="tech-tag">{tech}</span>
         ))}
+      {project.link !== "none" && (
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+          {t('Voir le projet')}
+        </a>
+      )}
       </div>
+
     </motion.article>
   );
 
@@ -89,11 +105,11 @@ const Projects = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Mes Projets
+          {t('Mes Projets')}
         </motion.h2>
         
         <div className="projects-category">
-          <h3 className="category-title">Projets Achevés</h3>
+          <h3 className="category-title">{t('Projets Achevés')}</h3>
           <div className="projects-grid">
             {completedProjects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
@@ -102,7 +118,7 @@ const Projects = () => {
         </div>
         
         <div className="projects-category">
-          <h3 className="category-title">Projets en Cours</h3>
+          <h3 className="category-title">{t('Projets en Cours')}</h3>
           <div className="projects-grid">
             {inProgressProjects.map((project, index) => (
               <ProjectCard 

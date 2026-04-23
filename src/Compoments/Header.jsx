@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './common/LanguageSwitcher';
 import './Styles/Header.css';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -32,23 +35,24 @@ const Header = () => {
     }
   }, [isDarkMode]);
 
+  // Defini fonksyon yo anvan w ap itilize yo
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   const navLinks = [
-    { href: '#about', label: 'À propos' },
-    { href: '#projects', label: 'Projets' },
-    { href: '#skills', label: 'Compétences' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: t('À propos') },
+    { href: '#projects', label: t('Projets') },
+    { href: '#skills', label: t('Compétences') },
+    { href: '#contact', label: t('Contact') },
   ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="header-text">
-          <h1 className="site-title">Jerry Innocent</h1>
-          <p className="tagline">Technicien en informatique | Developper web front-end</p>
+          <h1 className="site-title">{t('Jerry INNOCENT')}</h1>
+          <p className="tagline">{t('Développeur web front-end')}</p>
         </div>
 
         <nav className="nav">
@@ -65,7 +69,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-
+          <LanguageSwitcher />
           <button 
             className={`theme-toggle ${isDarkMode ? 'dark' : ''}`}
             onClick={toggleTheme}

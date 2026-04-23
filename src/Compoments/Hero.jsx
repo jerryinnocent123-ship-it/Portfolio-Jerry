@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './Styles/Hero.css';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
+
   return (
     <section id="hero" className="hero">
       <div className="hero-container">
@@ -18,7 +22,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Bienvenue sur mon Portfolio
+            {t('Bienvenue sur mon Portfolio')}
           </motion.h2>
           
           <motion.p 
@@ -27,7 +31,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Découvrez mes projets et mon univers créatif
+            {t('Découvrez mes projets et mon univers créatif')}
           </motion.p>
           
           <motion.div 
@@ -37,10 +41,10 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <a href="#projects" className="btn-primary">
-              Voir mes Projets
+              {t('Voir mes Projets')}
             </a>
             <a href="#contact" className="btn-secondary">
-              Me Contacter
+              {t('Me Contacter')}
             </a>
           </motion.div>
         </motion.div>

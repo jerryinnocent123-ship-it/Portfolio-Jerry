@@ -86,10 +86,114 @@
   transition: all 0.3s ease;
 }
 
+
 .contact-iframe {
   border: none;
   min-height: 800px;
   background: transparent;
+}
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.label-form {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+.input-form,
+.textarea-form {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.input-form:focus,
+.textarea-form:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.textarea-form {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.submit-button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error messages from ValidationError */
+.contact-form p {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: -1rem;
+  margin-bottom: 0;
+}
+
+/* Success message */
+.contact-form .success-message {
+  color: #28a745;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 1.2rem;
+  }
+  
+  .input-form,
+  .textarea-form {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Responsive */
