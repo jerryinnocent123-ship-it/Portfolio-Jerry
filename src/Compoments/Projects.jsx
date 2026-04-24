@@ -40,6 +40,13 @@ const Projects = () => {
       technologies: ['React'],
       status: t('completed'),
       link:"none"
+    },
+    {
+      title: t('Creation TodoApp'),
+      description: t('Réalisation d\'un TodoApp , avec interface interactive , responsive.'),
+      technologies: ['React','tailwind','UUID','lucide React'],
+      status: t('completed'),
+      link:"https://github.com/jerryinnocent123-ship-it/TodoApp-simple.git"
     }
   ];
 
