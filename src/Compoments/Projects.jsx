@@ -47,7 +47,7 @@ const Projects = () => {
       technologies: ['React','tailwind','UUID','lucide React'],
       status: t('completed'),
       link:"https://github.com/jerryinnocent123-ship-it/TodoApp-simple.git"
-    }
+    },
   ];
 
   const inProgressProjects = [
