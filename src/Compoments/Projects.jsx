@@ -48,6 +48,13 @@ const Projects = () => {
       status: t('completed'),
       link:"https://github.com/jerryinnocent123-ship-it/TodoApp-simple.git"
     },
+    {
+      title: t('Unplash Picture'),
+      description: t('Réalisation d\'un App , avec interface interactive , responsive, qui nous permet de trouver des images(unplash Site)'),
+      technologies: ['React',],
+      status: t('completed'),
+      link:"https:/https://github.com/jerryinnocent123-ship-it/Unplash.git"
+    },
   ];
 
   const inProgressProjects = [
