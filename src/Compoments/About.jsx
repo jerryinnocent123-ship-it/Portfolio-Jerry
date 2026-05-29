@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import './Styles/About.css';
 
 const About = () => {
@@ -14,21 +13,14 @@ const About = () => {
   return (
     <section id="about" className="section about-section">
       <div className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <h2 className={`section-title reveal ${inView ? 'visible' : ''}`}>
           {t('À propos de moi')}
-        </motion.h2>
+        </h2>
 
         <div className="about-content" ref={ref}>
-          <motion.div
-            className="about-text"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
+            className={`about-text reveal-from-left ${inView ? 'visible' : ''}`}
+            style={{ transitionDelay: '0.2s' }}
           >
             <p>
               <p> <strong>{t('Qui suis-je ?')}</strong><br />
@@ -36,13 +28,11 @@ const About = () => {
               <p>{t('Avec quelques années d\'expérience à mon actif, j\'ai appris que la performance et l\'esthétique ne s\'opposent pas. Au contraire, elles vont de pair. Je passe des heures à peaufiner chaque détail, à chasser les lenteurs, à rendre chaque interaction fluide et naturelle. Mon credo ? Un code propre, maintenable, mais surtout une expérience utilisateur qui en jette, sans jamais prendre l\'utilisateur pour un idiot.')}</p>
               <p>{t('Ce que je vous propose, ce n\'est pas juste un site qui marche. C\'est un outil pensé pour vous, rapide, agréable à utiliser, et taillé sur mesure pour vos besoins. Parce qu\'au fond, un bon développeur, ce n\'est pas celui qui enchaîne les lignes de code le plus vite possible, mais celui qui sait répondre à une vraie problématique humaine avec une solution technique élégante.')}</p>
               </p>
-              </motion.div>
+              </div>
 
-          <motion.div
-            className="about-image"
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
+            className={`about-image reveal-from-right ${inView ? 'visible' : ''}`}
+            style={{ transitionDelay: '0.4s' }}
           >
             <div className="image-wrapper">
               <img
@@ -53,7 +43,7 @@ const About = () => {
               <div className="image-overlay"></div>
               <div className="image-border"></div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -21,6 +21,42 @@
   animation: rotate 30s linear infinite;
 }
 
+.hero-title,
+.hero-subtitle,
+.hero-buttons {
+  opacity: 0;
+}
+
+.hero-title.hero-slide-in-left {
+  animation: fade-in-left 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-subtitle.hero-slide-in-right {
+  animation: fade-in-right 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.hero-buttons.hero-fade-in {
+  animation: fade-in-up 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fade-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

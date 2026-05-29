@@ -1,9 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import './Styles/Projects.css';
-import { link } from 'framer-motion/client';
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -68,12 +66,9 @@ const Projects = () => {
   ];
 
   const ProjectCard = ({ project, index }) => (
-    <motion.article 
-      className="project-card"
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -10, scale: 1.02 }}
+    <article 
+      className={`project-card reveal-from-bottom ${inView ? 'visible' : ''}`}
+      style={{ transitionDelay: `${0.1 + index * 0.08}s` }}
     >
       <div className="project-header">
         <h4 className="project-title">{project.title}</h4>
@@ -93,20 +88,15 @@ const Projects = () => {
       )}
       </div>
 
-    </motion.article>
+    </article>
   );
 
   return (
     <section id="projects" className="section projects-section bg-light">
       <div className="container" ref={ref}>
-        <motion.h2 
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <h2 className={`section-title reveal ${inView ? 'visible' : ''}`}>
           {t('Mes Projets')}
-        </motion.h2>
+        </h2>
         
         <div className="projects-category">
           <h3 className="category-title">{t('Projets Achevés')}</h3>
