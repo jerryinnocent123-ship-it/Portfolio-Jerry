@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
 import './Styles/Contact.css';
@@ -23,21 +22,14 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact-section bg-light">
       <div className="container" ref={ref}>
-        <motion.h2 
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <h2 className={`section-title reveal ${inView ? 'visible' : ''}`}>
           {t('Me Contacter')}
-        </motion.h2>
+        </h2>
         
         <div className="contact-container">
-          <motion.div 
-            className="contact-info"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div 
+            className={`contact-info reveal-from-left ${inView ? 'visible' : ''}`}
+            style={{ transitionDelay: '0.2s' }}
           >
             <h3 className="contact-subtitle">{t('Restons en contact')}</h3>
             <p>
@@ -46,11 +38,10 @@ const Contact = () => {
             
             <div className="contact-details">
               {contactMethods.map((method, index) => (
-                <motion.div 
+                <div 
                   key={index}
-                  className="contact-method"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  className={`contact-method reveal-from-left ${inView ? 'visible' : ''}`}
+                  style={{ transitionDelay: `${0.3 + index * 0.08}s` }}
                 >
                   <method.icon />
                   <div>
@@ -59,19 +50,17 @@ const Contact = () => {
                       {method.value}
                     </a>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div 
-            className="contact-form-container"
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div 
+            className={`contact-form-container reveal-from-right ${inView ? 'visible' : ''}`}
+            style={{ transitionDelay: '0.4s' }}
           >
             <ContactForm />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

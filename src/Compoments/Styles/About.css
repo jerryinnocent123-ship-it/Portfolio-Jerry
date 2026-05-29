@@ -24,6 +24,38 @@
   border-radius: 2px;
 }
 
+.section-title.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text,
+.about-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-text.reveal-from-left {
+  transform: translateX(-40px);
+}
+
+.about-image.reveal-from-right {
+  transform: translateX(40px);
+}
+
+.about-text.visible,
+.about-image.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import './Styles/Skills.css';
 
 const Skills = () => {
@@ -41,26 +40,19 @@ const Skills = () => {
   return (
     <section id="skills" className="section skills-section">
       <div className="container" ref={ref}>
-        <motion.h2 
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <h2 className={`section-title reveal ${inView ? 'visible' : ''}`}>
           {t('Mes Compétences')}
-        </motion.h2>
+        </h2>
         
         <div className="skills-container">
           <div className="skills-category">
             <h3 className="skills-category-title">{t('Techniques')}</h3>
             <div className="skills-list">
               {technicalSkills.map((skill, index) => (
-                <motion.div 
+                <div 
                   key={index}
-                  className="skill-item"
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`skill-item reveal-from-left ${inView ? 'visible' : ''}`}
+                  style={{ transitionDelay: `${0.1 + index * 0.08}s` }}
                 >
                   <span className="skill-name">{skill.name}</span>
                   <div className="skill-level">
@@ -71,7 +63,7 @@ const Skills = () => {
                       style={{ width: '0%' }}
                     ></div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -80,20 +72,13 @@ const Skills = () => {
             <h3 className="skills-category-title">{t('Outils & Technologies')}</h3>
             <div className="skills-tags">
               {tools.map((tool, index) => (
-                <motion.span 
+                <span 
                   key={index}
-                  className="tool-tag"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  whileHover={{ 
-                    scale: 1.1,
-                    backgroundColor: 'var(--primary-color)',
-                    color: 'white'
-                  }}
+                  className={`tool-tag reveal-scale ${inView ? 'visible' : ''}`}
+                  style={{ transitionDelay: `${0.15 + index * 0.05}s` }}
                 >
                   {tool}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>
